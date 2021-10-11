@@ -2,10 +2,26 @@ const fs = require('fs');
 const { promisify } = require('util');
 const writeFile = promisify(fs.writeFile);
 
-const csvtojson = require('csvtojson');
+const csvTojson = require('csvtojson');
 const csvFilePath = './csv/data.csv';
 
-csvtojson()
+// #1 Using Promises
+
+csvTojson()
   .fromFile(csvFilePath)
-  .then((jsonObj) => writeFile('data.txt', JSON.stringify(jsonObj)))
+  .then((jsonObj) => writeFile('dataTask2.txt', JSON.stringify(jsonObj)))
   .catch((err) => console.error(err));
+
+// #2 Using async/await
+
+// async function run() {
+//   try {
+//     const jsonObj = await csvTojson().fromFile(csvFilePath);
+//     await writeFile('dataTask2.txt', JSON.stringify(jsonObj));
+//   } catch(err) {
+//     console.error(err);
+//   }
+    
+// };
+
+// run();

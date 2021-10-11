@@ -1,0 +1,1 @@
+[{"Book":"The Compound Effect","Author":"Darren Hardy","Amount":"5","Price":"9.48"},{"Book":"The 7 Habits of Highly Effective People","Author":"Stephen R. Covey","Amount":"4","Price":"23.49"}]
